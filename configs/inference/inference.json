@@ -1,0 +1,12 @@
+{
+  "version": "inference-v1",
+  "note": "Inference-only subset of release restart-v3 (cache/degradation/CURRENT-v3.json, release_hash 1c897cde...). Aggregate parameters only, no frame-level data.",
+  "files": {
+    "view_config": "view-config.json",
+    "orientation_overrides": "orientation-overrides.json"
+  },
+  "sha256": {
+    "view_config": "2a7a8487f0a8b19dab18b4314145e6c9685b0ea045d3353f3fdb3bbf5a648828",
+    "orientation_overrides": "f03f41044024208de61f46243465b33b33ecbd29f7c04457777489322f35b579"
+  }
+}

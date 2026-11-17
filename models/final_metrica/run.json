@@ -1,0 +1,92 @@
+{
+ "name": "final_metrica",
+ "spec": "exps/final_metrica.toml",
+ "base": "baseline",
+ "steps": [
+  {
+   "use": "feature.nap1_dead"
+  },
+  {
+   "use": "feature.nap1_pitch"
+  },
+  {
+   "use": "loss.near_change",
+   "weight": 0.5
+  },
+  {
+   "use": "feature.contest_geometry"
+  },
+  {
+   "use": "feature.ball_touch",
+   "lag": 0.4
+  },
+  {
+   "use": "decode.wide",
+   "scale": [
+    0.01,
+    0.02,
+    0.05
+   ],
+   "lambda_emit": [
+    0.3,
+    0.5,
+    1.0
+   ],
+   "window": [
+    0,
+    3,
+    8
+   ],
+   "gate_scale": [
+    0.02,
+    0.05,
+    0.1
+   ],
+   "floor": [
+    1e-14,
+    1e-12,
+    1e-10
+   ]
+  }
+ ],
+ "model": {},
+ "git": {
+  "commit": "08bb3def14fe285d15bce6fbf4b2b4c45913fa86",
+  "branch": "HEAD",
+  "dirty": false
+ },
+ "started": "2026-11-16T00:51:47+00:00",
+ "device": "cuda:Tesla T4",
+ "host": "cfb96b6f448f",
+ "quick": false,
+ "time_s": {
+  "train": 4045.315702676773,
+  "ensemble": 700.7464995384216,
+  "blend": 0.00015091896057128906
+ },
+ "train": [
+  "s1: 10 epoch, tốt nhất 0.6359, khởi tạo exp/baseline/ckpt/s1/ep005.pt, gđ1 3 ep lr 0.001 đóng băng ['encoder.phi.2', 'temporal', 'had', 'touch', 'team', 'ball'] +cột cũ (học 2882/177546); gđ2 7 ep lr 0.0003 đóng băng không (học 177546/177546)",
+  "s2: 10 epoch, tốt nhất 0.6481, khởi tạo exp/baseline/ckpt/s2/ep003.pt, gđ1 3 ep lr 0.001 đóng băng ['encoder.phi.2', 'temporal', 'had', 'touch', 'team', 'ball'] +cột cũ (học 2882/177546); gđ2 7 ep lr 0.0003 đóng băng không (học 177546/177546)",
+  "s3: 10 epoch, tốt nhất 0.6520, khởi tạo exp/baseline/ckpt/s3/ep010.pt, gđ1 3 ep lr 0.001 đóng băng ['encoder.phi.2', 'temporal', 'had', 'touch', 'team', 'ball'] +cột cũ (học 2882/177546); gđ2 7 ep lr 0.0003 đóng băng không (học 177546/177546)"
+ ],
+ "ensemble": {
+  "n_ckpt": 9,
+  "spell_f1": 0.6691331738720103,
+  "params": {
+   "scale": 0.02,
+   "floor": 1e-14,
+   "cap": 0.5,
+   "gate_scale": 0.02,
+   "window": 3,
+   "lambda_emit": 0.5,
+   "L_alive": 7.29,
+   "L_dead": 24.5,
+   "share_dead": 0.234,
+   "p_switch_after_dead": 0.693,
+   "eps_gate": 0.01,
+   "deadball_switch_gate": true
+  }
+ },
+ "blend": null,
+ "finished": "2026-11-16T02:11:03+00:00"
+}

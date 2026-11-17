@@ -1,0 +1,4 @@
+{
+ "best_ckpt": "ep005.pt",
+ "note": "init checkpoint of this seed for exps/final_metrica.toml and exps/bt04_metrica.toml, as recorded in models/final_metrica/run.json"
+}

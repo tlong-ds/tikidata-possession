@@ -1,0 +1,17 @@
+# Current baseline = nap1_pitch (2026-11-14): continue nap1_dead (0.5863) with stage-1 pitch control
+# at the ball -> 0.5938 dev/select (+0.0075 [+0.0045,+0.0105], 5/5 wins).
+# History: switch_b*_r1 0.5770 -> nap1_dead 0.5863 (+stage-1 dead-ball probability) -> nap1_pitch 0.5938.
+# Do not run this spec: weights are packaged in models/baseline, initializing final_metrica and bt04_metrica.
+# Experiments with base="models/baseline" inherit the steps below; disable with inherit=false.
+name = "baseline"
+base = "scratch"
+
+[[step]]
+use = "feature.nap1_dead"
+
+[[step]]
+use = "feature.nap1_pitch"
+
+[[step]]
+use = "loss.near_change"
+weight = 0.5

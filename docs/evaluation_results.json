@@ -1,0 +1,67 @@
+{
+  "match": "DFL-MAT-J03WN1",
+  "versions": [
+    "DFL-MAT-J03WN1_r05.npz",
+    "DFL-MAT-J03WN1_r06.npz",
+    "DFL-MAT-J03WN1_r07.npz",
+    "DFL-MAT-J03WN1_r08.npz",
+    "DFL-MAT-J03WN1_r09.npz"
+  ],
+  "stage": "Frozen configuration before final retraining",
+  "aggregation": "Separate metrics on each version; mean and sample standard deviation over five fixed degradation versions",
+  "systems": {
+    "organisers_baseline": {
+      "spellF1": [
+        0.23065380493033225,
+        0.20873180873180877,
+        0.2115736040609137,
+        0.20396246089676745,
+        0.207502679528403
+      ],
+      "macroF1": [
+        0.47958425300109114,
+        0.45877659833564327,
+        0.4755087944897422,
+        0.4826678348408792,
+        0.4762705376510296
+      ],
+      "summary": {
+        "spellF1": {
+          "mean": 0.21248487162964502,
+          "sd": 0.010517601316546738
+        },
+        "macroF1": {
+          "mean": 0.4745616036636771,
+          "sd": 0.009272567191789934
+        }
+      }
+    },
+    "bt04_metrica": {
+      "spellF1": [
+        0.6622576966932725,
+        0.6683090705487122,
+        0.6807174887892377,
+        0.6827433628318584,
+        0.661123595505618
+      ],
+      "macroF1": [
+        0.9033917292671032,
+        0.9027407943302799,
+        0.9092465238188785,
+        0.9079176323143686,
+        0.9068703637680594
+      ],
+      "summary": {
+        "spellF1": {
+          "mean": 0.6710302428737398,
+          "sd": 0.010167889652821891
+        },
+        "macroF1": {
+          "mean": 0.9060334086997379,
+          "sd": 0.0028458162623374696
+        }
+      }
+    }
+  },
+  "verification": "All five per-version spellF1 values for the selected model reproduce previously saved evaluation scores within absolute tolerance 1e-8."
+}

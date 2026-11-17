@@ -1,0 +1,6 @@
+# Reproduction environment: Python 3.12.11, Linux; run python -m src.submit run.
+# Use these exact versions for byte-for-byte reproduction; other versions may change a few frames through floating-point differences.
+numpy==2.5.4
+scipy==1.18.1
+pandas==3.1.1
+torch==2.15.0

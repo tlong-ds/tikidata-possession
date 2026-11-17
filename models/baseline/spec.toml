@@ -1,0 +1,25 @@
+# Add stage-1 pitch control at the ball as an input, using the same training schedule as nap1_dead.
+name = "nap1_pitch"
+base = "baseline"
+
+[train]
+seeds = [1, 2, 3]
+freeze_old_inputs = true
+
+[[train.stage]]
+epochs = 3
+lr = 1e-3
+freeze = ["encoder.phi.2", "temporal", "had", "touch", "team", "ball"]
+
+[[train.stage]]
+epochs = 7
+lr = 3e-4
+freeze = []
+freeze_old_inputs = false
+
+[[step]]
+use = "feature.nap1_pitch"
+
+[[step]]
+use = "loss.near_change"
+weight = 0.5

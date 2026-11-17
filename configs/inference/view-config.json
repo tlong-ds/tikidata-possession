@@ -1,0 +1,118 @@
+{
+  "version": "view-speed-units-2",
+  "speed_reference": {
+    "input_unit": "km/h",
+    "output_unit": "m/s",
+    "scale": 0.2777777777777778,
+    "declaration": "legacy io_dfl raw S contract",
+    "source_doi": "10.1038/s41597-025-04505-y"
+  },
+  "max_speed_m_s": 8.862537553826852,
+  "speed_quantiles_999": {
+    "target": 8.862537553826852,
+    "calibration": 8.01559692155016
+  },
+  "window": 21,
+  "polyorder": 3,
+  "candidates": [
+    {
+      "window": 5,
+      "polyorder": 2,
+      "mean_half_median_mae": 0.022439138413105297,
+      "half_medians": [
+        0.022251492958325958,
+        0.022626783867884637
+      ]
+    },
+    {
+      "window": 5,
+      "polyorder": 3,
+      "mean_half_median_mae": 0.06677850280749698,
+      "half_medians": [
+        0.06721258598404445,
+        0.0663444196309495
+      ]
+    },
+    {
+      "window": 7,
+      "polyorder": 2,
+      "mean_half_median_mae": 0.013969760752502558,
+      "half_medians": [
+        0.01384854023412152,
+        0.014090981270883596
+      ]
+    },
+    {
+      "window": 7,
+      "polyorder": 3,
+      "mean_half_median_mae": 0.035626576186371606,
+      "half_medians": [
+        0.035616874157425094,
+        0.03563627821531812
+      ]
+    },
+    {
+      "window": 11,
+      "polyorder": 2,
+      "mean_half_median_mae": 0.009891722945735648,
+      "half_medians": [
+        0.009885828396403507,
+        0.00989761749506779
+      ]
+    },
+    {
+      "window": 11,
+      "polyorder": 3,
+      "mean_half_median_mae": 0.017087374967215185,
+      "half_medians": [
+        0.016929634481949063,
+        0.017245115452481308
+      ]
+    },
+    {
+      "window": 15,
+      "polyorder": 2,
+      "mean_half_median_mae": 0.011713103078632416,
+      "half_medians": [
+        0.01183115717526162,
+        0.011595048982003212
+      ]
+    },
+    {
+      "window": 15,
+      "polyorder": 3,
+      "mean_half_median_mae": 0.010837930710681953,
+      "half_medians": [
+        0.010694192308867922,
+        0.010981669112495984
+      ]
+    },
+    {
+      "window": 21,
+      "polyorder": 2,
+      "mean_half_median_mae": 0.01856103105250312,
+      "half_medians": [
+        0.018924034178891547,
+        0.01819802792611469
+      ]
+    },
+    {
+      "window": 21,
+      "polyorder": 3,
+      "mean_half_median_mae": 0.0071609234057434246,
+      "half_medians": [
+        0.00706392480181095,
+        0.007257922009675899
+      ]
+    }
+  ],
+  "common_eligible_count": 3208337,
+  "training_matches": [
+    "DFL-MAT-J03WMX"
+  ],
+  "calibration_hash": "7ec84625f7fc34a0b423f8507065bfcea8082a87d90f94f0d824d18f38f1f120",
+  "target_profile_hash": "ccdb367ff80d2d9da7a3dc742a1029b04b2be522ad634e81dae57991e8244f9c",
+  "numpy_version": "2.5.4",
+  "scipy_version": "1.18.1",
+  "config_hash": "1f9efa3e247d904cb6f92298bf1715d1c3837043fda689b6a2acd69c7155254d"
+}

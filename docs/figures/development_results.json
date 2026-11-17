@@ -1,0 +1,15 @@
+{
+  "metric": "spellF1",
+  "dataset": "Degraded DFL development match J03WN1",
+  "subset": "dev/select",
+  "aggregation": "Mean over five fixed degradation realisations of one match",
+  "conditions": {
+    "plain": "Original development ball",
+    "target_like": "Visible ball smoothed with a 0.24 s Gaussian plus 0.4 m coloured noise"
+  },
+  "models": [
+    {"label": "+ Metrica (selected)", "plain": 0.6605, "target_like": 0.6349},
+    {"label": "+ Ball touch (lag 0.4 s)", "plain": 0.6450, "target_like": 0.6240},
+    {"label": "Contest geometry", "plain": 0.6096, "target_like": 0.6016}
+  ]
+}

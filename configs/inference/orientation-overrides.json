@@ -1,0 +1,16 @@
+{
+  "BAR-ATH_tactical": {
+    "1": {
+      "attack_sign": 1,
+      "reason": "Supplied EPTS XML ProviderTeamsParameters/attack_direction_first_half; second half reverses ends",
+      "metadata_sha256": "327e35e32e46a647389b88f883d4f9a2ab931e3e6148aef2fcf8f22b1e93c43a",
+      "derivation": "direct first-half declaration"
+    },
+    "2": {
+      "attack_sign": -1,
+      "reason": "Supplied EPTS XML ProviderTeamsParameters/attack_direction_first_half; second half reverses ends",
+      "metadata_sha256": "327e35e32e46a647389b88f883d4f9a2ab931e3e6148aef2fcf8f22b1e93c43a",
+      "derivation": "first-half declaration with halftime change of ends"
+    }
+  }
+}

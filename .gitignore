@@ -1,0 +1,35 @@
+# Match data and everything derived from it: never commit (the data is not redistributable).
+data/*
+!data/README.md
+train_data/
+cache/
+release-*.zip
+*_possession_gt.csv
+*_possession_gt_meta.json
+*.mp4
+
+# Outputs (the submitted file's sha256 is recorded in evaluation/results/nap3.json)
+/TikiData.csv
+/TikiData.json
+evaluation/results/*.csv
+evaluation/reports/
+evaluation/scoreboard.csv
+artifacts/
+submission/*.csv
+submission/*.pdf
+!submission/technical.pdf
+!submission/figures/*.pdf
+submission/*.aux
+submission/*.log
+submission/*.out
+submission/*.fdb_latexmk
+submission/*.fls
+
+# Environment
+.venv/
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.DS_Store
+.env
+.env.*

@@ -1,0 +1,95 @@
+{
+ "params": {
+  "scale": 0.02,
+  "floor": 1e-14,
+  "cap": 0.5,
+  "gate_scale": 0.02,
+  "window": 3,
+  "lambda_emit": 0.5,
+  "L_alive": 7.29,
+  "L_dead": 24.5,
+  "share_dead": 0.234,
+  "p_switch_after_dead": 0.693,
+  "eps_gate": 0.01,
+  "deadball_switch_gate": true
+ },
+ "tune": {
+  "ckpts": [
+   "/tmp/repo/artifacts/exp/final_metrica/ckpt/s1/ep010.pt",
+   "/tmp/repo/artifacts/exp/final_metrica/ckpt/s1/ep009.pt",
+   "/tmp/repo/artifacts/exp/final_metrica/ckpt/s1/ep008.pt",
+   "/tmp/repo/artifacts/exp/final_metrica/ckpt/s2/ep010.pt",
+   "/tmp/repo/artifacts/exp/final_metrica/ckpt/s2/ep009.pt",
+   "/tmp/repo/artifacts/exp/final_metrica/ckpt/s2/ep008.pt",
+   "/tmp/repo/artifacts/exp/final_metrica/ckpt/s3/ep010.pt",
+   "/tmp/repo/artifacts/exp/final_metrica/ckpt/s3/ep009.pt",
+   "/tmp/repo/artifacts/exp/final_metrica/ckpt/s3/ep008.pt"
+  ],
+  "best": {
+   "params": {
+    "scale": 0.02,
+    "floor": 1e-14,
+    "cap": 0.5,
+    "gate_scale": 0.02,
+    "window": 3,
+    "lambda_emit": 0.5,
+    "L_alive": 7.29,
+    "L_dead": 24.5,
+    "share_dead": 0.234,
+    "p_switch_after_dead": 0.693,
+    "eps_gate": 0.01,
+    "deadball_switch_gate": true
+   },
+   "spell_f1": 0.6691331738720103,
+   "per_file": [
+    0.6878,
+    0.6698,
+    0.6656,
+    0.6529,
+    0.6695
+   ],
+   "spells": 391.8,
+   "fixed_from": "models/bt04_metrica"
+  },
+  "top": [
+   {
+    "params": {
+     "scale": 0.02,
+     "floor": 1e-14,
+     "cap": 0.5,
+     "gate_scale": 0.02,
+     "window": 3,
+     "lambda_emit": 0.5,
+     "L_alive": 7.29,
+     "L_dead": 24.5,
+     "share_dead": 0.234,
+     "p_switch_after_dead": 0.693,
+     "eps_gate": 0.01,
+     "deadball_switch_gate": true
+    },
+    "spell_f1": 0.6691331738720103,
+    "per_file": [
+     0.6878,
+     0.6698,
+     0.6656,
+     0.6529,
+     0.6695
+    ],
+    "spells": 391.8,
+    "fixed_from": "models/bt04_metrica"
+   }
+  ],
+  "nap1_decode": {
+   "spell_f1": 0.6704731598384364,
+   "per_file": [
+    0.6797,
+    0.6762,
+    0.6752,
+    0.6556,
+    0.6657
+   ],
+   "spells": 439.0
+  },
+  "n_grid": 1
+ }
+}

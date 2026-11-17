@@ -1,0 +1,4 @@
+{
+  "_note": "Khối 4 (nap1.decode) khi đi sau mạng nấc 2: ghi đè lên nap1/configs/params_official.json. Chọn trên train_data/dev/select (5 bản) với ensemble 10 checkpoint official_s1 + official_s2: lambda_emit 0,2 -> 0,454; 1,0 -> 0,525; 2,0 -> 0,530; 3-6 ngang 0,529-0,530; 10 -> 0,527. eps_gate 0,003-0,1 không đổi điểm nên giữ của nấc 1.",
+  "lambda_emit": 2.0
+}

@@ -1,0 +1,4 @@
+# Training and data preparation (pipeline/, src.exp). Inference only needs requirements-submit.txt.
+-r requirements-submit.txt
+lxml
+pytest

@@ -1,0 +1,76 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 250" font-family="Helvetica, Arial, sans-serif" font-size="11">
+  <defs>
+    <marker id="ar" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M0,0 L10,5 L0,10 z" fill="#444"/>
+    </marker>
+    <style>
+      .box{fill:#fff;stroke:#444;stroke-width:1.1}
+      .tr{fill:#eef3fb;stroke:#3a63a8;stroke-width:1.1}
+      .inf{fill:#f4f4f4;stroke:#444;stroke-width:1.1}
+      .t{font-weight:bold;font-size:11.5px}
+      .s{fill:#333;font-size:10px}
+      .lab{fill:#3a63a8;font-size:10px;font-style:italic}
+      .ln{stroke:#444;stroke-width:1.1;fill:none;marker-end:url(#ar)}
+      .dl{stroke:#3a63a8;stroke-width:1.1;fill:none;stroke-dasharray:4 3;marker-end:url(#ar)}
+    </style>
+  </defs>
+
+  <!-- training row -->
+  <text x="10" y="16" class="lab">final training (other matches only)</text>
+  <rect x="10" y="24" width="150" height="58" rx="4" class="tr"/>
+  <text x="85" y="44" text-anchor="middle" class="t">Open tracking</text>
+  <text x="85" y="59" text-anchor="middle" class="s">6 DFL + 3 Metrica matches</text>
+  <text x="85" y="72" text-anchor="middle" class="s">H/A/D from flags / events</text>
+
+  <rect x="205" y="24" width="170" height="58" rx="4" class="tr"/>
+  <text x="290" y="44" text-anchor="middle" class="t">Degradation D(·; θ)</text>
+  <text x="290" y="59" text-anchor="middle" class="s">ball blocks, track fragments,</text>
+  <text x="290" y="72" text-anchor="middle" class="s">slot re-use, noise · fresh per epoch</text>
+
+  <rect x="420" y="24" width="140" height="58" rx="4" class="tr"/>
+  <text x="490" y="44" text-anchor="middle" class="t">Model fitting</text>
+  <text x="490" y="59" text-anchor="middle" class="s">3 seeds · keep last</text>
+  <text x="490" y="72" text-anchor="middle" class="s">3 epochs per seed</text>
+
+  <path d="M160,53 L203,53" class="ln"/>
+  <path d="M375,53 L418,53" class="ln"/>
+
+  <!-- profile from target -->
+  <rect x="205" y="112" width="170" height="40" rx="4" class="box"/>
+  <text x="290" y="129" text-anchor="middle" class="t">Quality profile θ</text>
+  <text x="290" y="143" text-anchor="middle" class="s">label-free statistics of target ATD</text>
+  <path d="M290,112 L290,84" class="dl"/>
+
+  <!-- inference row -->
+  <text x="10" y="186" class="lab">inference (BAR–ATH)</text>
+  <rect x="10" y="194" width="110" height="50" rx="4" class="inf"/>
+  <text x="65" y="214" text-anchor="middle" class="t">Tactical ATD</text>
+  <text x="65" y="229" text-anchor="middle" class="s">+ homography</text>
+  <path d="M65,194 L65,132 L203,132" class="dl"/>
+
+  <rect x="150" y="194" width="140" height="50" rx="4" class="inf"/>
+  <text x="220" y="212" text-anchor="middle" class="t">Stage-1 signals</text>
+  <text x="220" y="226" text-anchor="middle" class="s">B̂ (Kalman+camera), σ,</text>
+  <text x="220" y="238" text-anchor="middle" class="s">p_dead, pitch control</text>
+
+  <rect x="320" y="194" width="150" height="50" rx="4" class="inf"/>
+  <text x="395" y="212" text-anchor="middle" class="t">Possession model</text>
+  <text x="395" y="226" text-anchor="middle" class="s">9-checkpoint ensemble</text>
+  <text x="395" y="238" text-anchor="middle" class="s">set encoder + BiGRU + switch</text>
+
+  <rect x="500" y="194" width="140" height="50" rx="4" class="inf"/>
+  <text x="570" y="212" text-anchor="middle" class="t">Switch-gated Viterbi</text>
+  <text x="570" y="226" text-anchor="middle" class="s">H, A, D after H, D after A</text>
+  <text x="570" y="238" text-anchor="middle" class="s">run-length priors</text>
+
+  <rect x="670" y="194" width="80" height="50" rx="4" class="box"/>
+  <text x="710" y="214" text-anchor="middle" class="t">CSV</text>
+  <text x="710" y="229" text-anchor="middle" class="s">frame,label</text>
+
+  <path d="M120,219 L148,219" class="ln"/>
+  <path d="M290,219 L318,219" class="ln"/>
+  <path d="M470,219 L498,219" class="ln"/>
+  <path d="M640,219 L668,219" class="ln"/>
+  <path d="M490,82 L490,140 L395,140 L395,192" class="ln"/>
+  <text x="497" y="122" class="s">weights</text>
+</svg>
